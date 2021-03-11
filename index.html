@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./fontawesome-all.css" />
+		<link rel="stylesheet" href="./style.css" />
+		<title>Drag and Drop</title>
+	</head>
+	<body>
+	<div class="container">
+		<header class="heading">
+			<h1>Kuis Hari Ini <br> Today's Quiz</h1>
+			<div class="heading-desc">
+				<p><strong>Petunjuk:</strong> Pilih jawaban yang sesuai dengan gambar dan audionya!</p>
+				<p><strong>Direction:</strong> Choose answers which appropriate with the picture and the audio!</p>
+			</div>
+		</header>
+		<article>
+			<div class="origin">
+				<div class="origin-heading">
+					<h2>Pilih jawaban yang sesuai! <br/> Choose appropriate answers!</h2>
+				</div>
+				<div id="origin" class="origin-choice" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+					<!-- <div class="choice-container"> -->
+						<div id="guava" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Guava
+						</div>
+					<!-- </div>	
+					<div class="choice-container"> -->
+						<div id="date" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Date
+						</div>
+					<!-- </div>	
+					<div class="choice-container"> -->
+						<div id="semangka" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Semangka
+						</div>
+					<!-- </div>	
+					<div class="choice-container"> -->
+						<div id="watermelon" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Watermelon
+						</div>
+					<!-- </div>	
+					<div class="choice-container"> -->
+						<div id="kurma" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Kurma
+						</div>
+					<!-- </div>	
+					<div class="choice-container"> -->
+						<div id="jambu" class="choice-draggable" draggable="true" ondragstart="onDragStart(event);">
+							Jambu
+						</div>
+					<!-- </div>	 -->
+				</div>
+			</div>
+			<div class="dropzone">
+				<audio id="drag-n-drop" src="./drag_n_drop.mp3"></audio>
+				<div class="dropzone-answer">
+					<div class="dropzone-heading">
+						<h2>Geser jawaban ke sini! <br/> Drag the answers here!</h2>
+					</div>
+					<div id="dropzone" class="dropzone-choice" ondragover="onDragOver(event);" ondrop="onDrop(event);">
+						<!-- <div class="choice-container">
+						</div>
+						<div class="choice-container">
+						</div>	 -->
+					</div>
+				</div>
+				<div class="dropzone-picture">
+					<div class="dropzone-pict">
+						<img src="./watermelon.png" alt="picture" width="100%"/>
+						<!-- <audio id="watermelon" controls>
+							<source src="./watermelon-male.mp3" type="audio/mpeg">
+						</audio> -->
+						<button class="button" type="button" onclick="playPause()" id="btn-playback" data-play="false">
+							<i class="fa fa-play"></i>
+							<span id="btn-text">PLAY</span>
+						</button>
+						<audio id="audio" src="./watermelon-female.mp3"></audio>
+						<!-- <button class="button pause" type="button" onclick="pause()"><span class="fas fa-pause-circle"></span></button> -->
+					</div>
+				</div>
+			</div>
+			<div class="check-answer">
+				<audio id="win" src="./win_sound.mp3"></audio>
+				<audio id="failed" src="./failed_sound.mp3"></audio>
+				<button type="button" onclick="cekJawaban()">Periksa - Check</button>
+				<div class="answer-feedback">
+					<p class="answer correct"><span class="fas fa-check-circle"></span> Jawabanmu benar! - Your answer is correct!</p>
+					<p class="answer incorrect"><span class="fas fa-times-circle"></span> Jawabanmu salah! - Your answer is incorrect!</p>
+				</div>
+			</div>
+		</article>
+	</div>
+		<script src="./script.js"></script>
+		<script src="./sweetalert.min.js"></script>
+		<script src="./fontawesome-all.js"></script>
+	</body>
+</html>

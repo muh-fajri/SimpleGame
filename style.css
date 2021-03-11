@@ -1,0 +1,193 @@
+/* Global Style */
+:root {
+	--red: #ff0000;
+	--dark-blue: #00aad4;
+	--blue: #00ccff;
+	--green: #00d455;
+	--yellow: #ffcc00;
+	--white-blue: #d5f6ff;
+	--white-yellow: #ffeeaa;
+	--white: #fff;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: sans-serif;
+}
+h1, h2 {
+	font-size: 17px;
+}
+button {
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	font-size: inherit;
+}
+img {
+	width: 300px;
+	height: 200px;
+}
+/*-- Global Style --*/
+
+/* Container */
+.container {
+	width: 675px;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+}
+/*-- Container --*/
+
+/* Header */
+header.heading {
+	padding: 20px;
+	display: flex;
+	align-items: center;
+}
+.heading-desc {
+	font-size: 13px;
+	margin-left: 30px;
+}
+/*-- Header --*/
+
+/* Content */
+article {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-size: 14px;
+}
+/*.ex-origin, .ex-dropzone {
+	flex-basis: 100%;
+	flex-grow: 1;
+}*/
+
+.choice-container {
+	content: '&copy;';
+	padding: 5px;
+	margin-bottom: 15px;
+	background-color: var(--white);
+}
+.choice-draggable {
+	padding: 8px 5px;
+	margin: 10px;
+	flex-basis: 25%;
+	flex-grow: 1;
+}
+.origin .choice-draggable {
+	background-color: var(--blue);
+}
+.dropzone .choice-draggable {
+	background-color: var(--yellow);
+}
+
+/* Origin */
+.origin {
+	padding: 20px;
+	background-color: var(--blue);
+}
+.origin-heading {
+	margin-bottom: 10px;
+}
+.origin-choice {
+	display: flex;
+	flex-wrap: wrap;
+	border: 2px dashed var(--blue);
+	background-color: var(--white);
+}
+/* .origin-choice > .choice-container {
+	border: 2px dashed var(--blue);
+	flex: auto;
+} */
+/*-- Origin --*/
+
+/* Dropzone */
+.dropzone {
+	display: flex;
+}
+.dropzone > div {
+	flex-basis: 100%;
+	flex-grow: 1;
+}
+.dropzone-choice > .choice-container {
+	border: 2px dashed var(--yellow);
+}
+.dropzone-answer, .dropzone-picture {
+	padding: 20px;
+}
+.dropzone-answer {
+	background-color: var(--yellow);
+}
+.dropzone-picture {
+	background-color: var(--green);
+}
+
+/* Dropzone Answer */
+.dropzone-heading {
+	margin-bottom: 10px;
+}
+.dropzone-choice {
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	padding: 20px;
+	margin: auto;
+	border: 2px dashed var(--yellow);
+	background-color: var(--white);
+}
+/*-- Dropzone Answer --*/
+
+/* Dropzone Picture */
+.dropzone-pict {
+	position: relative;
+}
+/* .dropzone-picture audio {
+	display: none;
+} */
+.dropzone-pict .button {
+	position: absolute;
+	bottom: 3px;
+	right: 0;
+	color: var(--white);
+	padding: 10px;
+	/* font-size: 20px; */
+	background-color: var(--dark-blue);
+}
+/* .button.pause {
+	display: none;
+} */
+/*-- Dropzone Picture --*/
+/*-- Dropzone --*/
+/*-- Content --*/
+
+/* Check Answer */
+.check-answer {
+	display: flex;
+	position: relative;
+	padding: 20px;
+	text-align: center;
+}
+.check-answer > button {
+	background-color: var(--dark-blue);
+	color: var(--white);
+	padding: 10px 40px;
+}
+.answer-feedback {
+	margin-left: 20px;
+	color: var(--white);
+	right: 20px;
+}
+.answer {
+	padding: 10px;
+	position: absolute;
+	width: 60%;
+}
+.answer.correct {
+	background-color: var(--green);
+	display: none;
+}
+.answer.incorrect {
+	background-color: var(--red);
+	display: none;
+}
